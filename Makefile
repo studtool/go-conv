@@ -7,7 +7,7 @@ COVERAGE_REPORT_FILE := $(TEST_DIR)/c.html
 TEST_FLAGS := -mod=vendor -v -race -coverprofile='$(COVERAGE_PROFILE_FILE)' -covermode=atomic
 COVER_FLAGS := -html='$(COVERAGE_PROFILE_FILE)' -o '$(COVERAGE_REPORT_FILE)'
 
-all: dep fmt lint
+all: dep fmt lint test
 
 fmt:
 	go fmt ./...
